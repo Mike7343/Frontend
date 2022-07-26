@@ -1,0 +1,176 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<img src="/assets/gobierno.png" width="400" height="100" HSPACE="20" VSPACE="20">
+    <img src="/assets/sep.png" width="400" height="100" HSPACE="20" VSPACE="20">
+    <img src="/assets/tecnm.png" width="400" height="100" HSPACE="20" VSPACE="20">
+
+<div class="container">
+  <h1 class="well">CREAR CUENTA</h1>
+  <div class="col-lg-12 well">
+    <div class="row">
+      <form >
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-4 form-group">
+              <label required type="text">Nombre</label>
+              <input [(ngModel)]="data.Nombre" [ngModelOptions]="{standalone: true}" type="text" placeholder="" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Apellido</label>
+              <input [(ngModel)]="data.Apellido" [ngModelOptions]="{standalone: true}" type="text" placeholder="" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Fecha de nacimiento</label>
+              <input [(ngModel)]="data.Fecha_Nacimiento" [ngModelOptions]="{standalone: true}" type="text" placeholder="" class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>CURP</label>
+              <input [(ngModel)]="data.CURP" [ngModelOptions]="{standalone: true}" type="text" placeholder="Introducir los 18 digitos." class="form-control">
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Divisiones</label>
+              <input [(ngModel)]="data.id_Divisiones" [ngModelOptions]="{standalone: true}" type="text" placeholder="" class="form-control">
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-sm-4 form-group">
+              <label>Pais</label>
+              <div class="dropdown open">
+                <div class="col-md-6 mb-3">
+                  <select class="form-control form-control-lg" name="category" id="validationCustom03"
+                    onchange="ChangecatList()" required>
+                    <option value="">Choose... </option>
+                    <option value="">México</option>
+                    <option value="">Estados Unidos</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a category.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Ciudad</label>
+              <div class="dropdown open">
+                <div class="col-md-6 mb-3">
+                  <select class="form-control form-control-lg" name="category" id="validationCustom03"
+                    onchange="ChangecatList()" required>
+                    <option value="">Choose... </option>
+                    <option value="">Aguascalientes</option>
+                    <option value="">Baja California </option>
+                    <option value="">Baja California Sur </option>
+                    <option value="">Campeche </option>
+                    <option value="">Chiapas </option>
+                    <option value="">Chihuahua </option>
+                    <option value="">Coahuila </option>
+                    <option value="">Colima </option>
+                    <option value="">Ciudad de México / CDMX</option>
+                    <option value="">Durango</option>
+                    <option value="">Estado de México</option>
+                    <option value="">Guanajuato </option>
+                    <option value="">Guerrero</option>
+                    <option value="">Hidalgo</option>
+                    <option value="">Jalisco</option>
+                    <option value="">Michoacán</option>
+                    <option value="">Morelos </option>
+                    <option value="">Nayarit </option>
+                    <option value="">Nuevo León</option>
+                    <option value="">Oaxaca </option>
+                    <option value="">Puebla </option>
+                    <option value="">Querétaro</option>
+                    <option value="">Quintana Roo </option>
+                    <option value="">San Luis Potosí </option>
+                    <option value="">Sinaloa </option>
+                    <option value="">Sonora </option>
+                    <option value="">Tabasco </option>
+                    <option value="">Tamaulipas </option>
+                    <option value="">Tlaxcala </option>
+                    <option value="">Veracruz </option>
+                    <option value="">Yucatán </option>
+                    <option value="">Zacatecas </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a category.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Codigo Postal</label>
+              <div class="dropdown open">
+                <div class="col-md-6 mb-3">
+                  <select class="form-control form-control-lg" name="category" id="validationCustom03"
+                    onchange="ChangecatList()" required>
+                    <option value="">Choose... </option>
+                    <option value="">55200</option>
+                    <option value="">55210</option>
+                    <option value="">55220</option>
+                    <option value="">55230</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a category.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 form-group">
+              <label>Colonia</label>
+              <div class="dropdown open">
+                <div class="col-md-6 mb-3">
+                  <select class="form-control form-control-lg" name="category" id="validationCustom03"
+                    onchange="ChangecatList()" required>
+                    <option value="">Choose... </option>
+                    <option value="">Estrella</option>
+                    <option value="">Valle de Anahuac</option>
+                    <option value="">Zapata</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a category.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Direccion</label>
+              <textarea placeholder="" rows="3" class="form-control"></textarea>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <label>Correo electrónico:</label>
+              <input type="text" placeholder="Ejemplo: nombre@ejemplo.com" class="form-control">
+            </div>
+            <div class="col-sm-6 form-group">
+              <label>Confirmar dirección de correo:
+              </label>
+              <input type="text" placeholder="Volver a introducir direccion de correo" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <label>Contraseña:</label>
+              <input type="text" placeholder="Introducir contraseña para la cuenta" class="form-control">
+            </div>
+            <div class="col-sm-6 form-group">
+              <label>Confirmar contraseña:</label>
+              <input type="text" placeholder="Volver a introducir la contraseña" class="form-control">
+            </div>
+          </div>
+
+
+          <button required type="text" type="button" class="btn btn-lg btn-info" (click)="EjecutaPostDB()">Crear cuenta</button>
+          <button type="button" class="btn btn-lg btn-success" [routerLink]="['/login']"
+            routerLinkActive="router-link-active">Pagina principal</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
